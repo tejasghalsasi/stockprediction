@@ -1,3 +1,6 @@
+#tejas Ghalsasi tejas.ghalsasi@csu.fullerton.edu
+#Varsha Hawaldar varshahawaldar@csu.fullerton.edu
+#CPSC 531 Project
 # Import
 import tensorflow as tf
 import numpy as np
@@ -6,7 +9,7 @@ from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 
 # Import data
-data = pd.read_csv('01_data/data_stocks.csv')
+data = pd.read_csv('data_stocks.csv')
 
 # Drop date variable
 data = data.drop(['DATE'], 1)
@@ -105,7 +108,7 @@ mse_train = []
 mse_test = []
 
 # Run
-epochs = 10
+epochs = 20
 for e in range(epochs):
 
     # Shuffle training data
@@ -133,3 +136,6 @@ for e in range(epochs):
             line2.set_ydata(pred)
             plt.title('Epoch ' + str(e) + ', Batch ' + str(i))
             plt.pause(0.01)
+# Print final MSE after Training
+mse_final = net.run(mse, feed_dict={X: X_test, Y: y_test})
+print(mse_final)

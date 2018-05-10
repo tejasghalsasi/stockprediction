@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=gnome-panel-launcher
+Name[en_US]=RunSentiment
+Exec=/home/aibot/Desktop/GIT_folder/Sentiment_Analysis_using_Python_Twitter_Kibana/runSentimentTool.sh
+Name=RunStocks
+Icon=gnome-panel-launcher
